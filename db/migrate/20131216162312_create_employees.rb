@@ -12,7 +12,7 @@ class CreateEmployees < ActiveRecord::Migration
     sales.each do |sale|
       employee_data = sale.employee.split(' ')
       Employee.find_or_create_by(first_name: employee_data[0], last_name:
-        employee_data[1], email: employee_data[2])
+        employee_data[1], email: employee_data[2][1..-2])
     end
   end
 
