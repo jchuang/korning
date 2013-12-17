@@ -19,7 +19,7 @@
 
       <tr>
         <td><%= sale.sale_date %></td>
-        <td>$<%= sale.sale_amount %></td>
+        <td>$<%= sprintf('%.2f', sale.sale_amount) %></td>
         <td><%= sale.units_sold %></td>
         <td><%= SalesController.price_per_unit(sale) %></td>
         <td><%= sale.invoice_no %></td>
